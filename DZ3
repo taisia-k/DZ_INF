@@ -1,0 +1,201 @@
+//1
+/*#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    int c = 0;
+    cin >> n;
+    for (int k = 1; k <= n; k++) {
+        int A;
+        cin >> A;
+        if (A > 2 * k) c++;
+    }
+    cout << c;
+    return 0;
+}
+
+
+
+
+//2
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    int mx = -99999999;
+    int c = 0;
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        int A;
+        cin >> A;
+        if (A % 2 == 0) {
+            c++;
+        }
+        else if (A > mx) {
+            mx = A;
+        }
+    }
+    cout << mx << endl << c << endl;
+    return 0;
+}
+
+
+
+
+//3
+#include <iostream>
+using namespace std;
+
+int main() {
+    float a[15];
+    for (int i = 0; i < 15; i++) {
+    cin >> a[i];
+    }
+    int mn= 0, mx = 0;
+    for (int i = 0; i < 15; i++) {
+        if (a[i] < a[mn]) mn = i;
+        if (a[i] > a[mx]) mx = i;
+    }
+    swap(a[0], a[mn]);
+    swap(a[14], a[mx]);
+    for (int i = 0; i < 15; i++) {
+    cout << a[i] << " "
+    }
+    return 0;
+}
+
+
+
+
+//4
+#include <iostream>
+using namespace std;
+
+int main() {
+    float a[15];
+    for (int i = 0; i < 15; i++) {
+        cin >> a[i];
+    }
+    int mn = 0, mx = 0;
+    for (int i = 0; i < 15; i++) {
+        if (a[i] < a[mn]) mn = i;
+        if (a[i] > a[mx]) mx = i;
+    }
+    if (mx < mn) {
+        cout << a[mn] * a[mx] << endl;
+    }
+    else {
+        cout << "-" << endl;
+    }
+    return 0;
+}
+
+
+
+//5
+#include <iostream>
+using namespace std;
+int main() {
+    int a[10];
+    for (int i = 0; i < 10; i++) {
+        cin >> a[i];
+    }
+    int mn = 0, mx = 0;
+    for (int i = 0; i < 10; i++) {
+        if (a[i] < a[mn]) mn = i;
+        if (a[i] > a[mx]) mx = i;
+    }
+    if (mn == 4 && mx == 9) {
+        cout << (a[mn] + a[mx]) / 2.0 << endl;
+    }
+    else {
+    cout << "-";
+    }
+    return 0;
+}
+
+
+
+
+//6
+#include <iostream>
+using namespace std;
+int main() {
+    float a[15];
+    for (int i = 0; i < 15; i++) {
+        cin >> a[i];
+    }
+    int mn = 0, mx = 0;
+    for (int i = 0; i < 15; i++) {
+        if (a[i] < a[mn]) mn = i;
+        if (a[i] > a[mx]) mx = i;
+    }
+    if (mn == 1 && mx == 0) {
+        for (int i = 0; i < 15; i++) {
+            a[i] /= 2.0;
+        }
+    }
+    for (int i = 0; i < 15; i++) {
+        cout << a[i] << " ";
+    }
+    return 0;
+}
+
+
+
+
+//7
+#include <iostream>
+using namespace std;
+int main() {
+    int a[15];
+    for (int i = 0; i < 15; i++) {
+        cin >> a[i];
+    }
+    int mn = 0, mx = 0;
+    for (int i = 0; i < 15; i++) {
+        if (a[i] < a[mn]) mn = i;
+        if (a[i] > a[mx]) mx = i;
+    }
+    if (a[mn] == 0 || a[mx] == 0) {
+        for (int i = 0; i < mn; i++) {
+            a[i] = 0;
+        }
+    }
+
+    for (int i = 0; i < 15; i++) {
+        cout << a[i] << " ";
+    }
+    return 0;
+}
+*/
+
+
+
+
+//8
+
+#include <iostream>
+using namespace std;
+int main() {
+    int a[10];
+    for (int i = 0; i < 10; i++) {
+        cin >> a[i];
+    }
+    int mn = 0, mx = 0;
+    for (int i = 0; i < 10; i++) {
+        if (a[i] < a[mn]) mn = i;
+        if (a[i] > a[mx]) mx = i;
+    }
+    if (mx == 1 && mn == 4) {
+        for (int i = mn; i < 10; i++) {
+            a[i] = a[mx];
+        }
+    }
+    for (int i = 0; i < 10; i++) {
+        cout << a[i] << " ";
+    }
+    return 0;
+}
